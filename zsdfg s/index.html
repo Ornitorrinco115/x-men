@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estyle/style.css">
+    <title>Test</title>
+</head>
+
+<body>
+
+    <!--Cabeçalho-->
+    <header>
+        <div class="cabeça">
+        <img class="logo" src="estyle/logo.png" alt="">
+        </div>
+    </header>
+<!--Cabeçalho-->
+
+<!--Corpo do site-->
+<section>
+    <main>
+        <div class="container">
+            <div class="card">
+                <img class="img" src="estyle/Vampira.png" alt="imagemPequena" id="imagem-pequena1">
+            </div>
+
+            <div class="card">
+                <img class="img" src="estyle/wolverine.png" alt="imagemPequena" id="imagem-pequena2">
+                <p></p>
+            </div>
+
+            <div class="card">
+                <img class="img" src="estyle/Tempestade.png" alt="imagemPequena" id="imagem-pequena3">
+
+            </div>
+
+            <div class="card">
+                <img class="img" src="estyle/Fera.png" alt="imagemPequena" id="imagem-pequena4">
+            </div>
+
+            <div class="card">
+                <img class="img" src="estyle/jean grey.png" alt="imagemPequena" id="imagem-pequena5">
+            </div>
+
+            <div class="card">
+                <img class="img" src="estyle/Cyclope.png" alt="imagemPequena" id="imagem-pequena6">
+            </div>
+
+            <div class="card">
+                <img class="img" src="estyle/Kitty.png" alt="imagemPequena" id="imagem-pequena7">
+
+            </div>
+
+            <div class="card">
+                <img class="img" src="estyle/Professor.png" alt="imagemPequena" id="imagem-pequena8">
+            </div>
+
+            <div class="card">
+                <img class="img" src="estyle/Gambit.png" alt="imagemPequena" id="imagem-pequena9">
+            </div>
+
+            <div class="card">
+                <img class="img" src="estyle/noturno.png" alt="imagemPequena" id="imagem-pequena10">
+            </div>
+
+            <div class="card">
+                <img class="img" src="estyle/Iceman.png" alt="imagemPequena" id="imagem-pequena11">
+            </div>
+
+            <div class="card">
+                <img class="img" src="estyle/Colossus.png" alt="imagemPequena" id="imagem-pequena12">
+            </div>
+
+        </div>
+    </main>
+    <aside>
+        <div>
+            <div id="secao-imagem-maior">
+
+            </div>
+        </div>
+    </aside>
+</section>
+<!--Corpo do site-->
+
+<!--Rodapé do site-->
+<footer>
+
+</footer>
+<!--Rodapé do site-->
+
+<script>
+   //ID das imagens pequenas
+const imagensPequenas = document.querySelectorAll(".img");
+
+//evento de clique
+imagensPequenas.forEach(imagemPequena => {
+    imagemPequena.addEventListener("click", exibirImagemMaior);
+});
+
+//Função para exibir a imagem maior
+function exibirImagemMaior(event) {
+    const imagemPequena = event.target;
+    const imagemMaior = document.createElement("img");
+    const caminhoImagemMaior = obterCaminhoImagemMaior(imagemPequena.src);
+    imagemMaior.src = caminhoImagemMaior;
+    imagemMaior.alt = "Imagem maior";
+    imagemMaior.style.cssText = "height: 500px; width: 480px;"; 
+
+    const secaoImagemMaior = document.getElementById("secao-imagem-maior");
+    secaoImagemMaior.innerHTML = "";
+
+    //Add imagem na seção maior
+    secaoImagemMaior.appendChild(imagemMaior);
+}
+
+//Função do caminho imagem maior
+function obterCaminhoImagemMaior(caminhoImagemPequena) {
+    const caminhoImagemMaior = caminhoImagemPequena.replace(".png", "_maior.png");
+    return caminhoImagemMaior;
+}
+
+</script>
+
+</body>
+
+</html>

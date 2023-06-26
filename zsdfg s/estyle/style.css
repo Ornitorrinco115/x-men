@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+/*Cabeçalho*/
+.cabeça{
+    height: 150px;
+    background-color: rgb(26, 27, 27);
+}
+.logo{
+    width: 150px;
+    height: 100px;
+    align-items: center;
+    margin-left: 690px;
+    margin-top: 20px;
+}
+/*Cabeçalho*/
+
+
+
+/*CSS dos cards/container */
+
+body{
+    background-color: rgb(15, 15, 14);
+}
+
+main{
+    display: block;
+
+}
+
+.container {
+    margin-top: 20px;
+    margin-left: 15px;
+    column-count: 4;
+    column-width: 50px;
+    column-gap: 5px;
+  }
+
+.card {
+    border-radius: 10px;
+    height: 180px;
+    width: 150px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    background-color: rgb(26, 27, 27);
+    border: 2px solid rgb(255, 247, 1);
+    padding: 10px;
+    margin: 0 0 1em 0;
+}
+/*CSS dos cards/container */
+
+
+
+.img{
+    width: 100px;
+    height: 150px;
+    cursor: pointer;
+}   
+
+#box{
+    background-color: red;
+    height: 500px;
+    overflow: hidden;
+}
+
+aside{
+    display: block;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+}
+
+.maxSize {
+    height: 1000px;
+    width: 70%; 
+}
+
+#secao-imagem-maior{
+    border-radius: 10px;
+    height: 580px;
+    width: 500px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    background-color: rgb(26, 27, 27);
+    border: 2px solid rgb(255, 247, 1);
+    padding: 10px;
+    margin: 0 0 1em 0;
+    margin-left: 300px;
+    margin-top: 20px;
+
+}
